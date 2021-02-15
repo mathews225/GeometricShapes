@@ -3,24 +3,27 @@ using System.Collections.Generic;
 using System.Text;
 
 namespace GeometricShapes {
-    class Quad {
+    class Rect {
         public int Side1 { get; set; }
         public int Side2 { get; set; }
-        public int Side3 { get; set; }
-        public int Side4 { get; set; }
+
 
         public int GetPerimeter() {
-            return Side1 + Side2 + Side3 + Side4;
+            return 2 * (Side1 + Side2);
+        }
+        public int GetArea() {
+            return Side1 * Side2;
         }
 
-        public Quad() {}
-        public Quad(int s1, int s2, int s3, int s4) {
+        public Rect() {
+
+        }
+
+        public Rect(int s1, int s2) {
             Side1 = s1;
             Side2 = s2;
-            Side3 = s3;
-            Side4 = s4;
         }
 
-    }
 
+    }
 }
